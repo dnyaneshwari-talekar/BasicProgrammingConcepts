@@ -9,11 +9,14 @@ namespace BasicProgrammingConcepts
     public class TypesOfArrayExample
     {
         OneOrSingleDimensionalArray oneDArray=new OneOrSingleDimensionalArray();
+        TwoDimensionalArray twoDArray=new TwoDimensionalArray();
         public void PrintResult()
         {
             oneDArray.Show();
             oneDArray.PrintPrimeNumbers();
             oneDArray.PrintNSizeArray();
+            twoDArray.PrintArray();
+            twoDArray.AddMatrix();
         }
     }
     public class OneOrSingleDimensionalArray
@@ -101,6 +104,38 @@ namespace BasicProgrammingConcepts
     }
     public class TwoDimensionalArray 
     {
+        int[,] numbers = new int[3, 3] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+        public void PrintArray()
+        {
+            Console.WriteLine("Two-Dimensional Array Example:");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(numbers[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public void AddMatrix()
+        {
+            int[,] matrixA = { { 21, 2,4 }, { 3, 4 ,6}, { 15, 9,8 } };
+            int[,] matrixB = { { 50, 36, 16 }, { 17, 8 , 16 }, { 10, 3, 6 } };
+            int[,] result = new int[3,3];
+
+            //array addition
+            Console.WriteLine("Addition of two matrices:");
+            for (int i=0; i < 3; i++)
+            {
+                for(int j=0; j < 3; j++)
+                {
+                    result[i, j] = matrixA[i, j] + matrixB[i, j];
+                    Console.Write(result[i, j] + "  ");
+                }
+                Console.WriteLine(" ");
+            }
+        }
     }
     public class MultiDimensionalArray
     {

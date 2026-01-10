@@ -10,6 +10,13 @@ namespace BasicProgrammingConcepts
     {
         static void Main(string[] args)
         {
+            MethodsExample methodsExample = new MethodsExample();
+            methodsExample.PrintMessage();
+            methodsExample.PrintCustomMessage("Hello, World!");
+            methodsExample.Square(5);
+            methodsExample.Display("Alice");
+            methodsExample.Add(10, 20, 30);
+
             StringExample stringExample = new StringExample();
             stringExample.PrintString();
 

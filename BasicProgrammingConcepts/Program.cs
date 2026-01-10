@@ -10,6 +10,26 @@ namespace BasicProgrammingConcepts
     {
         static void Main(string[] args)
         {
+            C c = new C();
+            c.MethodA();
+            c.MethodB();
+            c.MethodC();
+
+            Car car = new Car();
+            car.Start();
+            car.Drive();
+
+            Bike bike = new Bike();
+            bike.Start();
+            bike.Ride();
+
+            MyDerivedClass myDerivedClass = new MyDerivedClass();
+            myDerivedClass.MyData();
+            myDerivedClass.Show();
+
+            MyClass myClass = new MyClass();
+            myClass.ShowData();
+
             VariablesAndDataTypes obj = new VariablesAndDataTypes();
             obj.PrintVariables();
 
@@ -33,6 +53,8 @@ namespace BasicProgrammingConcepts
 
             TypesOfArrayExample typesOfArrayExample = new TypesOfArrayExample();
             typesOfArrayExample.PrintResult();
+
+            
         }
     }
 }

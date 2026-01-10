@@ -10,6 +10,9 @@ namespace BasicProgrammingConcepts
     {
         static void Main(string[] args)
         {
+            EncapsulationExample encapsulationExample = new EncapsulationExample();
+            encapsulationExample.show();
+
             C c = new C();
             c.MethodA();
             c.MethodB();

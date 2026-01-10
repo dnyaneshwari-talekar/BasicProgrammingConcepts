@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EncapsulationExample.cs" />
     <Compile Include="InheritanceExample.cs" />
     <Compile Include="InterfacesExample.cs" />
     <Compile Include="TypesOfArrayExample.cs" />

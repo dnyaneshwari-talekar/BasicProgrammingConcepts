@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InheritanceExample.cs" />
+    <Compile Include="InterfacesExample.cs" />
     <Compile Include="TypesOfArrayExample.cs" />
     <Compile Include="ControlStatements.cs" />
     <Compile Include="LoopsExample.cs" />

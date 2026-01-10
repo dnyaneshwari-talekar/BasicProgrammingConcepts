@@ -10,6 +10,9 @@ namespace BasicProgrammingConcepts
     {
         OneOrSingleDimensionalArray oneDArray=new OneOrSingleDimensionalArray();
         TwoDimensionalArray twoDArray=new TwoDimensionalArray();
+        MultiDimensionalArray multiDimalArray=new MultiDimensionalArray();
+        JaggedArray jaggedArray=new JaggedArray();
+        ImplicitlyTypedArray implicitlyTypedArray=new ImplicitlyTypedArray();
         public void PrintResult()
         {
             oneDArray.Show();
@@ -17,6 +20,9 @@ namespace BasicProgrammingConcepts
             oneDArray.PrintNSizeArray();
             twoDArray.PrintArray();
             twoDArray.AddMatrix();
+            multiDimalArray.PrintMatrix();
+            jaggedArray.PrintJaggedArray();
+            implicitlyTypedArray.PrintImplicitlyTypedArray();
         }
     }
     public class OneOrSingleDimensionalArray
@@ -139,14 +145,88 @@ namespace BasicProgrammingConcepts
     }
     public class MultiDimensionalArray
     {
+        //Array with more than  one dimension
+        int[,] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        public void PrintMatrix()
+        {
+            Console.WriteLine("Multi-Dimensional Array Example:");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(matrix[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
     public class JaggedArray
     {
+        public void PrintJaggedArray()
+        {
+            // Declare a jagged array
+            int[][] numbers = new int[3][];
+
+            // Initialize each row with different sizes
+            numbers[0] = new int[] { 1, 2, 3 };
+            numbers[1] = new int[] { 4, 5 };
+            numbers[2] = new int[] { 6, 7, 8, 9 };
+
+            // Print jagged array elements
+            Console.WriteLine("Jagged Array Example:");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                for (int j = 0; j < numbers[i].Length; j++)
+                {
+                    Console.Write(numbers[i][j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
     public class ImplicitlyTypedArray
     {
+        public void PrintImplicitlyTypedArray() 
+        {
+            var fruits = new[] { "Apple", "Banana", "Mango" };
+            //Print
+            Console.WriteLine("Implicitly Typed Array");
+            foreach (var fruit in fruits)
+            {
+                Console.WriteLine(fruit);
+            }
+        }
     }
+
     public class ArrayOfObjects
     {
+        public class Student
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public int Marks { get; set; }
+        }
+        public void PrintArrayOfObjects() 
+        {
+            // Declare array of objects
+            Student[] students = new Student[3];
+
+            // Initialize objects
+            students[0] = new Student { Id = 1, Name = "Rahul", Marks = 85 };
+            students[1] = new Student { Id = 2, Name = "Anita", Marks = 90 };
+            students[2] = new Student { Id = 3, Name = "Suresh", Marks = 78 };
+
+            // Access array of objects
+            Console.WriteLine("Array Of Object Example..");
+            foreach (Student s in students)
+            {
+                Console.WriteLine($"Id: {s.Id}, Name: {s.Name}, Marks: {s.Marks}");
+            }
+        }
     }
 }

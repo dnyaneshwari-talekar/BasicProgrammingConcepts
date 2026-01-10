@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="InheritanceExample.cs" />
     <Compile Include="InterfacesExample.cs" />
+    <Compile Include="StringExample.cs" />
     <Compile Include="TypesOfArrayExample.cs" />
     <Compile Include="ControlStatements.cs" />
     <Compile Include="LoopsExample.cs" />

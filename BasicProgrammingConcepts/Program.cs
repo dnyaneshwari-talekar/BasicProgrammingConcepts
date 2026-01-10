@@ -10,6 +10,9 @@ namespace BasicProgrammingConcepts
     {
         static void Main(string[] args)
         {
+            StringExample stringExample = new StringExample();
+            stringExample.PrintString();
+
             C c = new C();
             c.MethodA();
             c.MethodB();
